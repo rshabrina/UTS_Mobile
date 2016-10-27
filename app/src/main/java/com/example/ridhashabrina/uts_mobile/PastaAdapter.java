@@ -2,6 +2,7 @@ package com.example.ridhashabrina.uts_mobile;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,8 +78,8 @@ public class PastaAdapter extends ArrayAdapter<String> {
                             PesananFragment.datacheckbox.add(NamaPasta[position]);
                             PesananFragment.datajumlah.add(np.getValue());
                             PesananFragment.dataharga.add(Harga[position]);
-                            Toast.makeText(getContext(),NamaPasta[position]+ " ditambahkan",Toast.LENGTH_SHORT).show();
-
+                            Toast.makeText(getContext(),"Order "+NamaPasta[position]+" sebanyak "+np.getValue()+" porsi.",Toast.LENGTH_SHORT).show();
+                            Log.d(PesananFragment.datacheckbox.get(position),"Hasilnya");
                             dialog.dismiss();
                         }
                     });
